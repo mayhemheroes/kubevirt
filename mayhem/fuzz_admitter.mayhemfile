@@ -1,3 +1,5 @@
 project: kubevirt
-target: /fuzz_admitter
+target: fuzz_admitter
 duration: 90
+cmds:
+  - cmd: /fuzz_admitter
