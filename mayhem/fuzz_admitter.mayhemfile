@@ -1,6 +1,3 @@
-project: kubevirt
-target: fuzz_admitter
-
-cmds:
-  - cmd: /fuzz_admitter -test.v -test.run=^$ -test.fuzz=FuzzAdmitter -test.fuzzcachedir /tmp/fuzz
-    libfuzzer: false
+version: '1.13'
+target: /fuzz_admitter
+duration: 90
