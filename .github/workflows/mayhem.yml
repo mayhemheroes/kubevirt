@@ -34,7 +34,7 @@ jobs:
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
     - name: Start Mayhem analysis
-      uses: forallsecure/mcode-action@v1
+      uses: forallsecure/mcode-action@long-runs
       with:
         mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
         args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.MAYHEMFILE }}
