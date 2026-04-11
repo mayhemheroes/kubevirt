@@ -45,7 +45,13 @@ import (
 )
 
 func main() {
-	data, err := io.ReadAll(os.Stdin)
+	var data []byte
+	var err error
+	if len(os.Args) > 1 {
+		data, err = os.ReadFile(os.Args[1])
+	} else {
+		data, err = io.ReadAll(os.Stdin)
+	}
 	if err != nil || len(data) < 8 {
 		os.Exit(0)
 	}
