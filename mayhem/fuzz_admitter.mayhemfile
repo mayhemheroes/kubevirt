@@ -3,3 +3,5 @@ target: fuzz_admitter
 duration: 90
 cmds:
   - cmd: /fuzz_admitter @@
+    env:
+      MFUZZ_COMPAT_LEVEL: "1"
